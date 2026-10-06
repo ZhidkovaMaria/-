@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            height: 80vh;
+            gap: 15px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .col-left {
+            flex: 1;
+        }
+
+        .col-center {
+            flex: 2.2;
+        }
+
+        .col-right {
+            flex: 1;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 10px;
+            width: 100%;
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+            flex: 1;
+        }
+
+        .box-wide {
+            flex: 2;
+        }
+
+        .box-narrow {
+            flex: 1;
+        }
+
+        .col-left .box-tall {
+            flex: 2;
+        }
+
+        .col-left .box-small {
+            flex: 1;
+        }
+
+        .col-center .box-large {
+            flex: 3;
+        }
+
+        .col-right .box-tall {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="column col-left">
+            <div class="box box-tall"></div>
+            <div class="box box-small"></div>
+        </div>
+        <div class="column col-center">
+            <div class="row">
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="box box-large"></div>
+            <div class="row">
+                <div class="box box-wide"></div>
+                <div class="box box-narrow"></div>
+            </div>
+        </div>
+        <div class="column col-right">
+            <div class="box box-tall"></div>
+            <div class="box box-tall"></div>
+        </div>
+    </div>
+</body>
+</html>
