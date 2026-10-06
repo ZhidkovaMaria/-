@@ -15,23 +15,24 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            width: 100vw;
+            height: 100vh;
             background-color: #000;
-            padding: 20px;
+            overflow: hidden;
         }
 
         .grid-container {
             display: flex;
             width: 100%;
-            max-width: 1200px;
-            height: 80vh;
-            gap: 15px;
+            height: 100%;
+            gap: 3px;
+            padding: 3px;
         }
 
         .column {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 3px;
         }
 
         .col-left {
@@ -48,7 +49,7 @@
 
         .box {
             background-color: #fff;
-            border-radius: 10px;
+            border-radius: 8px;
             width: 100%;
             flex-grow: 1;
             flex-basis: 0;
@@ -56,7 +57,7 @@
 
         .row {
             display: flex;
-            gap: 15px;
+            gap: 3px;
             flex: 1;
         }
 
